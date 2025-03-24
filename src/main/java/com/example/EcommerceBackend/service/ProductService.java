@@ -20,6 +20,7 @@ public class ProductService {
     private ProductRepo productRepo;
 
 
+    @Cacheable(value = "products")
     public List<Product> getAllProducts(){
         return productRepo.findAll();
     }
